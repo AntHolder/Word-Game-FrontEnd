@@ -3,16 +3,19 @@
   <head>
     <title>My webpage!</title>
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="sounds.js" type="text/javascript"></script>
     
   </head>
   <body>
     <div class= "game-info">
     <h1 class="welcome-message">Welcome to our Rhyme Game!</h1>
     <p class="current-score">SCORE:0</p>
-    <h2 class="timer">60</h2>
     </div>
-    <h4 id='date'></h4>
+    <div>
+    <span class="timer-span">
+      <h2 class="timer">60</h2>
+      </span>
+    </div>
+    <!-- <h4 id='date'></h4> -->
 
     <div class="main-div">
       <div class="word-card">
@@ -22,8 +25,9 @@
     <button class= "play">PLAY</button>
   </div>
    <div class="user-div">
-     <div class= "user-card">
-    <form class= "user-form">
+     
+    <div class= "user-card">
+      <form class= "user-form">
       <label for="name">Name:</label><br>
       <input type="text" id="name" name="name" ><br><br>
       <label for="username">Username:</label><br>

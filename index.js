@@ -9,11 +9,13 @@ let userForm = document.querySelector(".user-form")
 let userDiv = document.querySelector(".user-div")
 let gameOverDiv = document.querySelector(".game-over")
 let currentUser = " "
+let name = " "
 let timerH2 = document.querySelector(".timer")
 let startButton = document.querySelector(".play")
 let rhymesForm = document.querySelector(".rhymes-form")
 let scoreCard = document.querySelector(".current-score")
 let finalScore = document.querySelector(".final-score")
+let greeting = document.querySelector(".welcome-message")
 let currentScore = 0
 let rightAnswers = []
 let wordsArr = []
@@ -29,7 +31,8 @@ function startGame() {
         
         fetch(`http://localhost:3000/words/${populateRandomWord(data)}`,{mode: 'cors'})
         .then(resp => resp.json())
-        .then(data => { 
+        .then(data => {
+            greeting.innerText = `Welcome, ${name}`
             createWordBox(data)
             createFormBox()
             createRhymesBox()
@@ -87,6 +90,7 @@ function populateRandomWord(data){
         let gameWord = document.querySelector(".game-word").innerText
         let form = document.querySelector(".rhymes-form")
         let ul = document.querySelector(".rhymes-list")
+        
         
        
         let input = document.querySelector("#rhyme").value
@@ -169,6 +173,7 @@ function populateRandomWord(data){
             .then(response => response.json())
             .then(user => {
                 currentUser = user.id
+                name = nameInput
                 userDiv.style.visibility = "hidden"
                 startGame()
             })//.THEN
