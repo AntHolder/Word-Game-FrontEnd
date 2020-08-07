@@ -31,7 +31,7 @@ window.addEventListener("DOMContentLoaded", event => {
 				})
 					.then(resp => resp.json())
 					.then(data => {
-						greeting.innerText = `Welcome, ${name}`;
+						greeting.innerText = `Hi, ${name}`;
 						createWordBox(data);
 						createFormBox();
 						createRhymesBox();
@@ -175,7 +175,7 @@ window.addEventListener("DOMContentLoaded", event => {
 			currentScore = 0;
 			scoreCard.innerText = `Score:${currentScore}`;
 			startGame();
-			timerH2.innerHTML = 60;
+			timerH2.innerHTML = 1;
 		}
 	}); //GAME OVER LISTENER
 
