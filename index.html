@@ -1,53 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My webpage!</title>
+    <title>Rhyme Time!</title>
     <link rel="stylesheet" href="styles/styles.css" />
-    
   </head>
   <body>
-    <div class= "game-info">
-    <h1 class="welcome-message">Welcome to our Rhyme Game!</h1>
-    <p class="current-score">SCORE:0</p>
+    <div class="game-info">
+      <h1 class="welcome-message">Welcome to Rhyme Time!</h1>
+      <p class="current-score">SCORE:0</p>
     </div>
     <div>
-    <span class="timer-span">
-      <h2 class="timer">1</h2>
+      <span class="timer-span">
+        <h2 class="timer">60</h2>
       </span>
     </div>
     <!-- <h4 id='date'></h4> -->
 
     <div class="main-div">
-      <div class="word-card">
-        
-      </div>
-      
-    <button class= "play">PLAY</button>
-  </div>
-   <div class="user-div">
-     
-    <div class= "user-card">
-      <form class= "user-form">
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name" ><br><br>
-      <label for="username">Username:</label><br>
-      <input type="text" id="username" name="username" ><br><br>
-      <input type="submit" value="PLAY">
-      </form> 
+      <div class="word-card"></div>
+
+      <button class="play">PLAY</button>
     </div>
-  </div>
-<!-- GAME OVER SCREEN-->
-  <div class="game-over">
-    <div class= "score-card">
-      <h3 class="final-score"></h3>
-      <h1 class="game-over-message">GAME OVER</h1>
-   <button class="play-again">PLAY AGAIN</button>
-   </div>
- </div>
+    <div class="user-div">
+      <div class="user-card">
+        <form class="user-form">
+          <label for="name">Name:</label><br />
+          <input class="input" type="text" name="name" /><br /><br />
+          <label for="username">Username:</label><br />
+          <input class="input" type="text" name="username" /><br /><br />
+          <input type="submit" value="PLAY" />
+        </form>
+      </div>
+    </div>
+    <!-- GAME OVER SCREEN-->
+    <div class="game-over">
+      <div class="score-card">
+        <h3 class="final-score"></h3>
+        <h1 class="game-over-message">GAME OVER</h1>
+        <button class="play-again">PLAY AGAIN</button>
+      </div>
+    </div>
   </body>
   <script type="text/javascript" src="index.js" charset="utf-8"></script>
 </html>
-
-
-
-

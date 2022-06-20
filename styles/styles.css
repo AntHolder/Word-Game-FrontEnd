@@ -1,177 +1,175 @@
 body {
-    text-align: center;
-    background-color:powderblue;
+  text-align: center;
+  background-color: rgb(22, 234, 163);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-message {
+  display: inline;
+}
+
+.current-score {
+  display: inline;
+  position: absolute;
+  right: 75px;
+  font-size: large;
+}
+
+.section-style {
+  margin-right: 25px;
+  margin-left: 25px;
+  background-color: white;
+}
+
+.each-word {
+  text-align: left 50vh;
+}
+
+.play {
+  position: absolute;
+  bottom: 100px;
+  /* left: 50; */
+}
+
+.user-div {
+  background-color: rgb(204, 204, 204);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  visibility: visible;
+  background-image: url("../static/images/rtbg.png");
+  height: 100vh; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+.user-form {
+  background-color: #efdadac6;
+  border: 2px solid;
+  border-radius: 5px;
+  position: relative;
+  width: 20em;
+  margin: auto;
+  padding: 5%;
+}
+.user-card {
+  font-family: "Aclonica";
+}
+
+.game-over {
+  opacity: 1;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: -15px;
+  left: 0px;
+  z-index: 1000;
+  visibility: hidden;
+  margin: 0;
+  background: yellow;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: 0;
+  transform: translate(-50%, -50%);
+}
+
+.play-again {
+  position: absolute;
+  top: 52%;
+
+  transform: translate(-50%, -50%);
+
+  background-color: #f4511e;
+
+  color: rgb(248, 248, 248);
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 24px;
+  margin: 3px 2px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.play-again:hover {
+  opacity: 1;
+}
+
+.final-score {
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-name: anim-1;
+  font-size: 2em;
+
+  margin-top: -10%;
+}
+@keyframes anim-1 {
+  0%,
+  8.3% {
+    left: -200%;
+    opacity: 0.5;
   }
+}
 
-  .welcome-message {
-    display: inline;
-  }
+.game-over-message {
+  transform: translateY(10px);
+  font-size: 65px;
+}
 
-  .current-score {
-    display: inline;
-    position: absolute;
-    right:75px;
-    font-size: large;
+.rhymes-form {
+  visibility: hidden;
+}
 
-  }
- 
-  
-  div {
-    margin-top: 15px;
-  }
+.rhymes-list {
+  list-style-type: "*";
+  max-width: 50px;
+}
 
-  
-  .section-style {
-    margin-right: 25px;
-    margin-left: 25px;
-    background-color: white;
-  }
+.timer-span {
+  background-color: rgb(29, 178, 223);
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+}
 
-  .each-word {
-    text-align: left 50vh;
-  }
+.timer {
+  position: relative;
+  bottom: 16px;
+}
 
-  .play{
-    position: fixed;
-    bottom: 100px;
-    left: 50;
-  }
+.each-word {
+  position: center;
+  text-align: center;
+  max-width: 50%;
+}
 
-  .user-div{
-    opacity:1;
-    background-color:#ccc;
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:-20px;
-    left:0px;
-    z-index:1000;
-    visibility:visible;
-    background-size: cover;
-    height: 100vh;
-    background-image: url("https://cdn2.vectorstock.com/i/1000x1000/21/51/game-backgrounds-landscape-at-morning-vector-10692151.jpg") 
-  }
+.rhymes-box {
+  max-width: 50%;
+}
 
-  .user-form{
-    
-    position: absolute;
-    top: 50%;
-    left: 55%;
-    width: 20em;
-    height: cover;
-    margin-top: -9em;
-    margin-left: -15em;
-    border: 1px solid;
-    background-color: #f3f3f3;
+.score-card {
+  margin-top: 20%;
+}
 
-  }
-  .user-card{
-    font-family: 'Aclonica'
-
-
-  }
-
-  .game-over{
-      opacity:1;
-      background-color:rgb(0, 0, 0);
-      position:fixed;
-      width:100%;
-      height:100%;
-      top:-15px;
-      left:0px;
-      z-index:1000;
-      visibility:hidden;
-      margin: 0;
-      background: yellow;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      margin-right: 0;
-      transform: translate(-50%, -50%);
-      
-  }
-
-  .play-again{
-   
-    position: absolute;
-    top: 52%;
-   
-    transform: translate(-50%,-50%);
-    
-    background-color: #f4511e;
-    
-    color: rgb(248, 248, 248);
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 24px;
-    margin: 3px 2px;
-    opacity: 0.8;
-    transition: 0.3s;
-  }
-  
-  .play-again:hover {opacity: 1}
-
-  .final-score {
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-    animation-name: anim-1 ;
-    font-size: 2em;
-    
-    margin-top: -10%;
-    
-    }
-  @keyframes anim-1 {
-    0%, 8.3% { left: -200%; opacity: .5; }
-   
-  }
-
-  .game-over-message{
-    
-    transform: translateY(10px);
-    font-size: 65px;
-
- 
-  }
-
-  
-
-  .rhymes-form{
-    visibility:hidden;
-  }
-
-  .rhymes-list{
-    list-style-type: "*";
-    max-width:50px;
-  }
-
-  .timer-span{
-    background-color:rgb(29, 178, 223);
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    display: inline-block;
-
-  }
-
-  .timer{
-    position:relative;
-    bottom: 16px;
-  }
-
-  .each-word{
-    position: center;
-    text-align:center;
-    max-width: 50%;
-  }
-
-  .rhymes-box{
-    max-width:50%;
-  }
-  
-
-  .score-card{
-    
-    margin-top: 20%;
-    
-  }
+.input {
+  width: 80%;
+  height: 200;
+  padding: 1%;
+  border-radius: 25px;
+  border: 2px solid rgb(36, 107, 240);
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: rgba(37, 125, 219, 0.73);
+}
